@@ -1,11 +1,11 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Src/Guard/DeskGuard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tileset/WallTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Src/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/Camera/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Objects/Bush.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Objects/LargeDoor.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Objects/Tree1.png" type="Texture" id=6]
 [ext_resource path="res://Src/MetalDetector/MetalDetector.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Src/Levels/BaseLevel.gd" type="Script" id=8]
 [ext_resource path="res://Src/Skybox/UstriaSkybox.tscn" type="PackedScene" id=9]
@@ -38,6 +38,8 @@
 [ext_resource path="res://Assets/Objects/WallImageRocket.png" type="Texture" id=36]
 [ext_resource path="res://Assets/Objects/Skeleton.png" type="Texture" id=37]
 [ext_resource path="res://Assets/Objects/WallImageMoonLanding.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Objects/LightOutdoor.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Objects/LargeDoor.png" type="Texture" id=40]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 32 )
@@ -53,7 +55,7 @@ script = ExtResource( 8 )
 modulate = Color( 0.52549, 0.52549, 0.52549, 1 )
 position = Vector2( 208, 256 )
 z_index = 1
-texture = ExtResource( 6 )
+texture = ExtResource( 40 )
 centered = false
 
 [node name="Rooms" type="TileMap" parent="."]
@@ -106,6 +108,89 @@ centered = false
 [node name="Tree" type="Sprite" parent="LevelObjects/Decorations"]
 position = Vector2( 40, 232 )
 texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree2" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -8, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree3" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -56, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree4" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -104, 232 )
+z_index = -1
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree5" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -152, 232 )
+z_index = -1
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree6" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -200, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree7" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -248, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree8" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( 88, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree9" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( 64, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree10" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( 112, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree11" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( 16, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree12" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -32, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree13" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -80, 232 )
+z_index = -1
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree14" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -176, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree15" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -224, 232 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tree16" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( -56, 184 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Tree17" type="Sprite" parent="LevelObjects/Decorations"]
+position = Vector2( 48, 184 )
+texture = ExtResource( 6 )
 centered = false
 
 [node name="Plant" type="Sprite" parent="LevelObjects/Decorations"]
@@ -293,11 +378,11 @@ position = Vector2( 312, 256 )
 connected_door_path = NodePath("../../../../Level6/LevelObjects/Doors/StaircaseCellar")
 
 [node name="StaircaseE1" parent="LevelObjects/Doors" instance=ExtResource( 22 )]
-position = Vector2( 528, 64 )
+position = Vector2( 512, 64 )
 connected_door_path = NodePath("../StaircaseCellar4")
 
 [node name="StaircaseCellar4" parent="LevelObjects/Doors" instance=ExtResource( 22 )]
-position = Vector2( 528, 320 )
+position = Vector2( 512, 320 )
 connected_door_path = NodePath("../StaircaseE1")
 
 [node name="Lights" type="Node2D" parent="LevelObjects"]
@@ -329,6 +414,42 @@ position = Vector2( 488, 72 )
 [node name="Light8" parent="LevelObjects/Lights" instance=ExtResource( 25 )]
 position = Vector2( 488, 200 )
 
+[node name="OutdoorLight" parent="LevelObjects/Lights" instance=ExtResource( 10 )]
+position = Vector2( 104, 256 )
+scale = Vector2( -1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="LevelObjects/Lights/OutdoorLight"]
+modulate = Color( 1, 1, 1, 0.341176 )
+position = Vector2( 0, -28 )
+texture = ExtResource( 39 )
+
+[node name="OutdoorLight2" parent="LevelObjects/Lights" instance=ExtResource( 10 )]
+position = Vector2( 0, 256 )
+scale = Vector2( -1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="LevelObjects/Lights/OutdoorLight2"]
+modulate = Color( 1, 1, 1, 0.341176 )
+position = Vector2( 0, -28 )
+texture = ExtResource( 39 )
+
+[node name="OutdoorLight3" parent="LevelObjects/Lights" instance=ExtResource( 10 )]
+position = Vector2( -104, 256 )
+scale = Vector2( -1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="LevelObjects/Lights/OutdoorLight3"]
+modulate = Color( 1, 1, 1, 0.341176 )
+position = Vector2( 0, -28 )
+texture = ExtResource( 39 )
+
+[node name="OutdoorLight4" parent="LevelObjects/Lights" instance=ExtResource( 10 )]
+position = Vector2( -208, 256 )
+scale = Vector2( -1, 1 )
+
+[node name="Sprite3" type="Sprite" parent="LevelObjects/Lights/OutdoorLight4"]
+modulate = Color( 1, 1, 1, 0.341176 )
+position = Vector2( 0, -28 )
+texture = ExtResource( 39 )
+
 [node name="Lasers" type="Node2D" parent="LevelObjects"]
 position = Vector2( 32, -32 )
 
@@ -346,7 +467,7 @@ MeowTube: 1234"
 highlight = true
 
 [node name="Note2" parent="LevelObjects" instance=ExtResource( 26 )]
-position = Vector2( 547, 326 )
+position = Vector2( 549, 326 )
 text = "Reminder: repair the ventilation duct."
 highlight = true
 
@@ -361,11 +482,6 @@ isFixedCam = true
 
 [node name="MetalDetector" parent="LevelObjects" instance=ExtResource( 7 )]
 position = Vector2( 184, 256 )
-
-[node name="OutdoorLight" parent="LevelObjects" instance=ExtResource( 10 )]
-position = Vector2( 96, 256 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
 
 [node name="ControlCabinet" parent="LevelObjects" instance=ExtResource( 15 )]
 position = Vector2( 392, 256 )
@@ -496,3 +612,5 @@ position = Vector2( 168, 128 )
 position = Vector2( 0, -16 )
 points = PoolVector2Array( 0, 0, 176, 0 )
 script = ExtResource( 20 )
+
+[editable path="LevelObjects/Note2"]
